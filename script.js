@@ -11,13 +11,15 @@
 
 
 // Ejercicio 4
-//const edad = window.prompt("Introduce tu edad actual: ");
+function ejercicio4() {
+    const edad = window.prompt("Introduce tu edad actual: ");
 
-//if (edad >= 18) {
-//console.log("Eres mayor de edad.");
-//} else {
-//console.log("Eres menor de edad.");
-//}
+    if (edad >= 18) {
+        console.log("Eres mayor de edad.");
+    } else {
+        console.log("Eres menor de edad.");
+    }
+}
 
 // Definición de variables: let var const
 // const: constante (su valor no varía)
@@ -25,7 +27,7 @@
 // var: ámbito de función
 
 // Ejercicio 5
-function calcula_edad() {
+function ejercicio5() {
     const edad1 = window.prompt("Introduce tu edad actual: ");
 
     if (edad1 >= 18) {
@@ -41,7 +43,7 @@ function calcula_edad() {
 //calcula_edad();
 
 // Ejercicio 6
-function auxiliar() {
+function ejercicio6() {
     let auxiliar;
     auxiliar = 10;
     console.log(auxiliar);
@@ -54,7 +56,7 @@ function auxiliar() {
 }
 
 // Ejercicio 7: Función potencia
-function potencia(base, exponente) {
+function ejercicio7(base, exponente) {
     let resultado = 1;
 
     for (let i = 0; i < exponente; i++) {
@@ -70,7 +72,7 @@ let exponente = 4;
 
 
 // Ejercicio 8: Mas bucles, solicita número y muestra el acumulado de 10 en 10
-function suma_diez(num_vueltas) {
+function ejercicio8(num_vueltas) {
     let result = 0;
 
     for (i = 0; i < num_vueltas; i++) {
@@ -80,11 +82,11 @@ function suma_diez(num_vueltas) {
     return result;
 }
 
-//console.log(`Ejercicio 8: ${suma_diez(50)}`);
+//console.log(`Ejercicio 8: ${ejercicio8(50)}`);
 
 // Ejercicio 9: Más bucles, solicita número y muestra el acumulado de 10 en 10.
 // Da error si introduces un negativo
-function suma_diez_v2(num_vueltas) {
+function ejercicio9(num_vueltas) {
     let result = 0;
 
     if (num_vueltas < 0) {
@@ -98,12 +100,12 @@ function suma_diez_v2(num_vueltas) {
     return result;
 }
 
-//console.log(`Ejercicio 9: ${suma_diez_v2(-5)}`);
+//console.log(`Ejercicio 9: ${ejercicio9(-5)}`);
 
 // Ejercicio 10: Calculadora. Pide dos números y muestra un menú para que los sumes,
 // restes multipliques o dividessegún la opción marcada. Valida los datos.
 
-function calculadora() {
+function ejercicio10() {
     let num1 = parseInt(window.prompt("Introduzca el primer operando: "));
     let num2 = parseInt(window.prompt("Introduzca el segundo operando: "));
 
@@ -118,7 +120,7 @@ function calculadora() {
             "e) Potencia \n " +
             "f) Salir");
 
-            let resultado = 0;
+        let resultado = 0;
 
         switch (operación) {
             case "a":
@@ -137,8 +139,8 @@ function calculadora() {
                 if (num2 == 0) {
                     console.error("No se puede dividir entre 0");
                 } else {
-                resultado = num1 / num2;
-                console.log(`${num1} / ${num2} = ${resultado}`);
+                    resultado = num1 / num2;
+                    console.log(`${num1} / ${num2} = ${resultado}`);
                 }
                 break;
             case "e":
@@ -157,10 +159,10 @@ function calculadora() {
 
 }
 
-calculadora();
+//ejercicio10();
 
 //Ejercicio 11; ternario
-function ejercicio11(){
+function ejercicio11() {
     let precio = 150;
     console.log("Precio original" + precio);
 
@@ -172,7 +174,7 @@ function ejercicio11(){
         precio = precio*0.75;
     }*/
 
-    precio = (edad >= 18) ? precio*0.80 : precio*0.75;
+    precio = (edad >= 18) ? precio * 0.80 : precio * 0.75;
 
     console.log("El precio tras el descuento es: " + precio);
 }
@@ -182,20 +184,20 @@ function ejercicio11(){
 //Ejercicio 12: Pide el precio por pantalla. Si es superior a 50 euros
 //el envio sale gratis. Si no 5€. El sistema debe mostrar al principio el precio original
 //y al final el precio total
-function ejercicio12(){
+function ejercicio12() {
     let precio = parseInt(window.prompt("Introduce el precio "));
     console.log("El precio original es: " + precio)
 
-    precio = (precio > 50)? precio: precio+5;
+    precio = (precio > 50) ? precio : precio + 5;
     console.log("El precio final es: " + precio);
 }
-ejercicio12();
+//ejercicio12();
 
 //Ejercicio 13: Crea un programa que cualcule un número aleatorio y pida al usuario
 //numeros hasta que lo acierte. Al finalizar, si el numero de intentos es superior
 //a 10 pintara por pantalla ¡has ganado! si es inferior.
-function ejercicio13(){
-    let num_aleat = Math.floor(Math.random()*100 + 1);
+function ejercicio13() {
+    let num_aleat = Math.floor(Math.random() * 100 + 1);
 
 }
 //ejercicio13();
