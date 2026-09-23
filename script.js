@@ -198,6 +198,16 @@ function ejercicio12() {
 //a 10 pintara por pantalla ¡has ganado! si es inferior.
 function ejercicio13() {
     let num_aleat = Math.floor(Math.random() * 100 + 1);
+    let numeroIntento;
+    let intentos = 0;
 
+    do{
+        numeroIntento = parseInt(window.prompt("Adivina un número del 1 al 100: "));
+        intentos ++;
+
+    } while(numeroIntento != num_aleat);
+
+    let veredicto = (intentos>10) ? "¡Has perdido!" : "¡Has ganado!";
+    console.log(`${veredicto} con ${intentos} intentos.`);
 }
-//ejercicio13();
+ejercicio13();
