@@ -286,11 +286,11 @@ function ejercicio17() {
     let numero = parseInt(window.prompt("Introduzca un número para calcular su factorial: "));
     let factorial = 1;
 
-    if (numero > 0 && numero % 2 == 0) {
+    if (numero > 0 && numero % 2 == 0 && numero != 0) {
         for (let i = 2; i <= numero; i++) {
             factorial *= i;
         }
-        console.log(`El factorial de ${numero} es ${factorial}`);
+        console.log(`El factorial de ${numero} es ${factorial}.`);
     } else {
         console.error("El número tiene que ser positivo y par.");
     }
@@ -298,9 +298,25 @@ function ejercicio17() {
 
 }
 
-ejercicio17();
+//ejercicio17();
 
 //Ejemplo 18: Pide un numero por pantalla e imprimelo invertido
+
+function ejercicio18() {
+    let numero = parseInt(window.prompt("Introduzca un número: "));
+    let numero_invertido = 0;
+
+    while (numero > 0) {
+        numero_invertido = numero_invertido * 10 + (numero % 10);
+        numero = Math.floor(numero / 10);
+    }
+
+    console.log(`El número invertido es ${numero_invertido}`);
+}
+
+ejercicio18();
+
+//ejercicio18();
 
 //Ejemplo 19: Muestra todos los divisores de un numero solicitado por pantalla
 
