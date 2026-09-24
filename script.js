@@ -273,11 +273,32 @@ function ejercicio15() {
 
 //Ejemplo 16: Pide un numero por pantalla y muestra el numero de digitos qu tiene.
 
-function ejercicio16(){
-    
+function ejercicio16() {
+
 }
+
+// ejercicio16();
+
 //Ejemplo 17: Calcula el factorial de un número solicitado por pantalla siempre
 // y cuando este número sea positivo y par.
+
+function ejercicio17() {
+    let numero = parseInt(window.prompt("Introduzca un número para calcular su factorial: "));
+    let factorial = 1;
+
+    if (numero > 0 && numero % 2 == 0) {
+        for (let i = 2; i <= numero; i++) {
+            factorial *= i;
+        }
+        console.log(`El factorial de ${numero} es ${factorial}`);
+    } else {
+        console.error("El número tiene que ser positivo y par.");
+    }
+
+
+}
+
+ejercicio17();
 
 //Ejemplo 18: Pide un numero por pantalla e imprimelo invertido
 
