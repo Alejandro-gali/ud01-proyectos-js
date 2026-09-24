@@ -205,7 +205,7 @@ function ejercicio13() {
         numeroIntento = parseInt(window.prompt("Adivina un número del 1 al 100: "));
         intentos ++;
 
-    } while(numeroIntento != num_aleat);
+    } while(numeroIntento != num_aleat && intentos <= 15);
 
     let veredicto = (intentos>10) ? "¡Has perdido!" : "¡Has ganado!";
     console.log(`${veredicto} con ${intentos} intentos.`);
