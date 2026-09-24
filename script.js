@@ -210,4 +210,7 @@ function ejercicio13() {
     let veredicto = (intentos>10) ? "¡Has perdido!" : "¡Has ganado!";
     console.log(`${veredicto} con ${intentos} intentos.`);
 }
-ejercicio13();
+//ejercicio13();
+
+// Ejercicio 14: Pide números hasta introducir el 0 y pinta por pantalla
+// el menor, el mayor y la media.
