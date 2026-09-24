@@ -201,16 +201,87 @@ function ejercicio13() {
     let numeroIntento;
     let intentos = 0;
 
-    do{
+    do {
         numeroIntento = parseInt(window.prompt("Adivina un número del 1 al 100: "));
-        intentos ++;
+        intentos++;
 
-    } while(numeroIntento != num_aleat && intentos <= 15);
+    } while (numeroIntento != num_aleat && intentos <= 15);
 
-    let veredicto = (intentos>10) ? "¡Has perdido!" : "¡Has ganado!";
+    let veredicto = (intentos > 10) ? "¡Has perdido!" : "¡Has ganado!";
     console.log(`${veredicto} con ${intentos} intentos.`);
 }
 //ejercicio13();
 
 // Ejercicio 14: Pide números hasta introducir el 0 y pinta por pantalla
 // el menor, el mayor y la media.
+
+function ejercicio14() {
+    let numero;
+    let mayor = 0;
+    let menor = Infinity;
+    let acumulador = 0;
+    let contador = 0;
+
+    do {
+
+        numero = parseInt(window.prompt("Introduce un número (0 En caso de querer terminar): "));
+        contador++;
+        acumulador += numero;
+
+        if (numero > mayor) {
+            mayor = numero;
+        }
+
+        if (numero < menor && numero != 0) {
+            menor = numero;
+        }
+
+    } while (numero != 0);
+
+    let media = acumulador / contador;
+
+    console.log(`El mayor número introducido ha sido el ${mayor},
+                El menor número introducido ha sido el ${menor}
+                y la media de los números introducidos es ${media}`
+    );
+}
+
+// ejercicio14();
+
+//Ejemplo 15: Pide una nota numérica y muestra por pantalla si es Suspenso [0-5],
+// Suficiente[5-6], Bien[6-7], Notable [7-9], Sobresaliente [9-10]
+
+function ejercicio15() {
+    let nota = parseInt(window.prompt("Introduzca una nota: "));
+
+    if (nota >= 0 && nota < 5) {
+        console.log("Suspenso.");
+    } else if (nota >= 5 && nota < 6) {
+        console.log("Suficiente.");
+    } else if (nota >= 6 && nota < 7) {
+        console.log("Bien.");
+    } else if (nota >= 7 && nota < 9) {
+        console.log("Notable.");
+    } else if (nota >= 9 && nota <= 10) {
+        console.log("Sobresaliente.");
+    } else {
+        console.error("Introduzca un valor correcto.");
+    }
+}
+
+// ejercicio15();
+
+//Ejemplo 16: Pide un numero por pantalla y muestra el numero de digitos qu tiene.
+
+function ejercicio16(){
+    
+}
+//Ejemplo 17: Calcula el factorial de un número solicitado por pantalla siempre
+// y cuando este número sea positivo y par.
+
+//Ejemplo 18: Pide un numero por pantalla e imprimelo invertido
+
+//Ejemplo 19: Muestra todos los divisores de un numero solicitado por pantalla
+
+//Ejemplo 20: Numero perfecto: Pide un número y determina si es perfecto. Un
+// número es perfecto cuando la suma de sus divisores propios sea igual al propio num
