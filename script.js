@@ -314,11 +314,43 @@ function ejercicio18() {
     console.log(`El número invertido es ${numero_invertido}`);
 }
 
-ejercicio18();
+//ejercicio18();
 
 //ejercicio18();
 
-//Ejemplo 19: Muestra todos los divisores de un numero solicitado por pantalla
+//Ejercicio 19: Muestra todos los divisores de un numero solicitado por pantalla
 
-//Ejemplo 20: Numero perfecto: Pide un número y determina si es perfecto. Un
+function ejercicio19() {
+    const numero = parseInt(window.prompt("Introduzca un número para indicar todos sus divisores: "));
+
+    for (let i = 0; i <= numero; i++) {
+        if (numero % i == 0) {
+            console.log(i);
+        }
+    }
+}
+
+// ejercicio19();
+
+//Ejercicio 20: Numero perfecto: Pide un número y determina si es perfecto. Un
 // número es perfecto cuando la suma de sus divisores propios sea igual al propio num
+
+function ejercicio20() {
+    const numero = parseInt(window.prompt("Introduzca un número: "));
+    let acumulador = 0;
+
+    for (let i = 0; i < numero; i++) {
+        if (numero % i == 0) {
+            console.log(i);
+            acumulador += i;
+        }
+    }
+
+    if (acumulador == numero) {
+        console.log(`El número ${numero} es perfecto.`);
+    } else {
+        console.log(`El número ${numero} no es perfecto.`);
+    }
+}
+
+// ejercicio20();
