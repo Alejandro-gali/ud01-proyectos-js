@@ -318,13 +318,151 @@ function ej19() {
 // 20. Función saludar. Crea una función saludar(nombre) que reciba un 
 // nombre como parámetro y muestre un saludo personalizado.
 
+function saludar(nombre) {
+    console.log(`Bienvenido al sistema ${nombre}!`);
+}
 function ej20() {
     const nombre = window.prompt("Escriba su nombre: ");
-
-    function saludar(nombre){
-        console.log(`Bienvenido al sistema ${nombre}!`);
-    }
-    saludar();
+    saludar(nombre);
 }
 
-ej20();
+// ej20();
+
+// 21. Función para calcular un área. Crea una función 
+// calcularArea(base, altura) que reciba la base y la altura de 
+// un rectángulo y devuelva su área.
+
+function calcularArea(base, altura) {
+    // console.log(`${base} * ${altura} = ${base * altura}`);
+    return base * altura;
+}
+function ej21() {
+    const base = parseFloat(window.prompt("Introduzca la base del rectángulo: "));
+    const altura = parseFloat(window.prompt("Introduzca la altura del rectángulo: "));
+
+    calcularArea(base, altura);
+}
+
+// ej21();
+
+// 22. Función para comprobar la mayoría de edad. Crea una función
+// esMayorDeEdad(edad) que devuelva true si la edad es igual o superior 
+// a 18 y false en caso contrario.
+
+function esMayorDeEdad(edad) {
+    if (edad >= 18) {
+        // console.log("true");
+        return true;
+    } else {
+        // console.log("false");
+        return false;
+    }
+}
+function ej22() {
+    const edad = parseInt(window.prompt("Introduzca su edad: "));
+    esMayorDeEdad(edad);
+}
+
+// ej22();
+
+// 23. Función para obtener el mayor. Crea una función que reciba 
+// dos números y devuelva el mayor de ellos.
+
+function elMayor(num1, num2) {
+    if (num1 > num2) {
+        // console.log(`${num1}`);
+        return num1;
+    } else if (num1 < num2) {
+        // console.log(`${num2}`);
+        return num2;
+    } else {
+        console.log("Los números son iguales");
+    }
+}
+function ej23() {
+    const num1 = parseFloat(window.prompt("Introduzca el primer número: "));
+    const num2 = parseFloat(window.prompt("Introduzca el segundo número: "));
+
+    elMayor(num1, num2);
+}
+
+// ej23();
+
+// 25. Calculadora mediante funciones. Crea las funciones sumar(), 
+// restar(), multiplicar() y dividir(). Después, crea un programa que 
+// solicite dos números y una operación y utilice la función correspondiente.
+
+function sumar(num1, num2) {
+    return num1 + num2;
+}
+function restar(num1, num2) {
+    return num1 - num2;
+}
+function multiplicar(num1, num2) {
+    return num1 * num2;
+}
+function dividir(num1, num2) {
+    return num1 / num2;
+}
+
+function ej25() {
+    const num1 = parseFloat(window.prompt("Introduzca el primer número: "));
+    const num2 = parseFloat(window.prompt("Introduzca el segundo número: "));
+
+    const operacion = window.prompt("Introduzca la operación que quiere realizar (sumar, restar, etc): ");
+
+    switch (operacion) {
+        case "sumar":
+            console.log(sumar(num1, num2));
+            break;
+        case "restar":
+            console.log(restar(num1, num2));
+            break;
+        case "multiplicar":
+            console.log(multiplicar(num1, num2));
+            break;
+        case "dividir":
+            console.log(dividir(num1, num2));
+            break;
+        default:
+            console.error("Operación inválida.");
+            break;
+    }
+}
+
+// ej25();
+
+// 26. Validador de notas. Crea una función que reciba una nota y 
+// devuelva un texto indicando si es «Suspenso», «Aprobado», «Notable» 
+// o «Sobresaliente». Utiliza después la función para comprobar varias 
+// notas.
+
+function validaNota(nota) {
+    let mensaje = null;
+
+    if(nota >= 0 && nota < 5){
+        mensaje = "Suspenso";
+    } else if(nota >= 5 && nota < 7){
+        mensaje = "Aprobado";
+    } else if(nota >= 7 && nota < 9){
+        mensaje = "Notable";
+    } else if(nota >= 9 && nota <= 10){
+        mensaje = "Sobresaliente";
+    } else{
+        console.error("La nota introducida es inválida.");
+    }
+
+    return mensaje;
+}
+function ej26(){
+    const nota = parseFloat(window.prompt("Introduzca la nota a validar: "));
+
+    console.log(validaNota(nota));
+}
+
+// ej26();
+
+// 27. Número primo. Crea una función esPrimo(numero) que determine 
+// si un número es primo. La función deberá devolver true o false.
+
+function esPrimo(numero){}
