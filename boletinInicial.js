@@ -66,22 +66,22 @@ function ej05() {
 function ej06() {
     const total_segundos = parseInt(window.prompt("Introduzca un número en segundos: "));
 
-    const horas = Math.floor(total_segundos/3600);
-    const resto_horas = Math.floor(total_segundos%3600);
+    const horas = Math.floor(total_segundos / 3600);
+    const resto_horas = Math.floor(total_segundos % 3600);
 
-    const minutos = Math.floor(resto_horas/60);
-    const resto_minutos = Math.floor(minutos%60);
+    const minutos = Math.floor(resto_horas / 60);
+    const resto_minutos = Math.floor(minutos % 60);
 
     const segundos = resto_minutos;
 
-    console.log(`El total de segundos introducidos equivalen a: \n` + 
-                `${horas} horas \n` +
-                `${minutos} minutos \n` +
-                `${segundos} segundos` 
+    console.log(`El total de segundos introducidos equivalen a: \n` +
+        `${horas} horas \n` +
+        `${minutos} minutos \n` +
+        `${segundos} segundos`
     );
 }
 
-ej06();
+// ej06();
 
 // 7. Intercambio de valores. Declara dos variables a y b e intercambia 
 // sus valores. Muestra el resultado antes y después del intercambio.
@@ -161,7 +161,7 @@ function ej10() {
 // 11. Calificación. Dada una nota entre 0 y 10, muestra si corresponde 
 // a un suspenso, aprobado, notable o sobresaliente.
 
-function ej11(){
+function ej11() {
     const nota = parseFloat(window.prompt("Introduzca la nota: "));
 
     if (nota >= 0 && nota < 5) {
@@ -183,10 +183,10 @@ function ej11(){
 
 // 12. Año bisiesto. Dado un año, determina si es bisiesto.
 
-function ej12(){
+function ej12() {
     const anio = parseInt(window.prompt("Introduzca un año: "));
 
-    if(anio % 4 == 0 && anio % 100 != 0){
+    if (anio % 4 == 0 && anio % 100 != 0) {
         console.log(`El año ${anio} es bisiesto.`);
     } else {
         console.log(`El año ${anio} no es bisiesto.`);
@@ -195,3 +195,136 @@ function ej12(){
 
 // ej12();
 
+// 13. Calculadora. Dados dos números y un operador (+, -, * o /), 
+// realiza la operación correspondiente utilizando una estructura de 
+// selección.
+
+function ej13() {
+    const numero1 = parseFloat(window.prompt("Introduzca el primer número: "));
+    const numero2 = parseFloat(window.prompt("Introduzca el segundo número"));
+
+    const operador = window.prompt("Escoja un operador para realizar la operación (+, -, * o /): ");
+
+    switch (operador) {
+        case "+":
+            console.log(`${numero1} + ${numero2} = ${numero1 + numero2}`);
+            break;
+        case "-":
+            console.log(`${numero1} - ${numero2} = ${numero1 - numero2}`);
+            break;
+        case "*":
+            console.log(`${numero1} * ${numero2} = ${numero1 * numero2}`);
+            break;
+        case "/":
+            console.log(`${numero1} / ${numero2} = ${numero1 / numero2}`);
+            break;
+        default:
+            console.error("Operación inválida.");
+    }
+}
+
+// ej13();
+
+// 14. Números del 1 al 10. Muestra por consola los números del 1 al 10 
+// utilizando una estructura de repetición.
+
+function ej14() {
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
+}
+
+// ej14();
+
+// 15. Números pares. Muestra todos los números pares comprendidos 
+// entre 1 y 100.
+
+function ej15() {
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+            console.log(i);
+        }
+    }
+}
+
+// ej15();
+
+// 16. Tabla de multiplicar. Dado un número, muestra su tabla de 
+// multiplicar del 1 al 10.
+
+function ej16() {
+    const numero = parseInt(window.prompt("Introduzca un número para ver su tabla de multiplicar: "));
+
+    console.log(`Tabla de multiplicar del ${numero}:`);
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${numero} * ${i} = ${numero * i}`);
+    }
+}
+
+// ej16();
+
+// 17. Suma hasta N. Dado un número N, calcula la suma de todos los 
+// números comprendidos entre 1 y N.
+
+function ej17() {
+    const n = parseInt(window.prompt("Introduzca un número para ver todos los valores comprendidos entre 1 y su número:"));
+
+    let suma = 0;
+
+    for (let i = 2; i < n; i++) {
+        console.log(i);
+        suma += i;
+    }
+
+    console.log(`La suma de todos los números comprendidos entre 1 y ${n} es: ${suma}`);
+}
+
+// ej17(); 
+
+// 18. Factorial. Dado un número entero positivo, calcula y muestra 
+// su factorial.
+
+function ej18() {
+    const numero = parseInt(window.prompt("Introduzca un número para calcular su factorial: "));
+    let factorial = 1;
+
+    for (let i = 2; i <= numero; i++) {
+        factorial *= i;
+    }
+
+    console.log(`El factorial de ${numero} es ${factorial}`);
+}
+
+// ej18();
+
+// 19. Múltiplos de 3. Dado un número N, muestra todos los múltiplos 
+// de 3 comprendidos entre 1 y N.
+
+function ej19() {
+    const numero = parseInt(window.prompt("Introduzca un número para ver todos los múltiplos de 3 comprendidos entre 1 y su numero: "));
+
+    for (let i = 2; i < numero; i++) {
+        if (i % 3 == 0) {
+            console.log(i);
+        }
+    }
+}
+
+// ej19();
+
+// 20. Función saludar. Crea una función saludar(nombre) que reciba un 
+// nombre como parámetro y muestre un saludo personalizado.
+
+function ej20() {
+    const nombre = window.prompt("Escriba su nombre: ");
+
+    function saludar(nombre){
+        console.log(`Bienvenido al sistema ${nombre}!`);
+    }
+    saludar();
+}
+
+ej20();
